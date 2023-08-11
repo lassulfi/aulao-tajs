@@ -42,4 +42,7 @@ async function handler(request, response) {
 
 const app = createServer(handler)
 
-app.listen(3000, () => console.log('listening at 3000'))
+export {
+  app,
+  handler
+}
