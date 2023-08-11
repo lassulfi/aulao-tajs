@@ -65,7 +65,7 @@ describe('API E2E test Suite', () => {
         it('should not be allowed to access private data without a token', async() => {
             const input = {
                 headers: {
-                    Authorization: ''
+                    authorization: ''
                 }
             }
 
@@ -85,7 +85,7 @@ describe('API E2E test Suite', () => {
         it('should be allowed to access private data with a valid token', async() => {
             const input = {
                 headers: {
-                    Authorization: _globalToken
+                    authorization: _globalToken
                 }
             }
 
