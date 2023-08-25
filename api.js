@@ -4,7 +4,7 @@ import JWT from 'jsonwebtoken'
 
 const DEFAULT_USER = {
   user: 'erickwendel',
-  password: '000'
+  password: '123'
 }
 const JWT_KEY = 'abc123'
 async function loginRoute(request, response) {

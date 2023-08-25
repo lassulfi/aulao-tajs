@@ -52,7 +52,7 @@ describe('API E2E test Suite', () => {
             });
 
             const expectedStatus = 200
-            assert.strictEqual(result.status, expectedStatus, `status code should be 401, actual: ${result.status}`);
+            assert.strictEqual(result.status, expectedStatus, `status code should be 200, actual: ${result.status}`);
 
             const response = await result.json()
             assert.ok(response.token.length > 20, `response should be a valid jwt token, actual: ${response.token}`)
@@ -75,7 +75,7 @@ describe('API E2E test Suite', () => {
             });
 
             const expectedStatus = 400
-            assert.strictEqual(result.status, expectedStatus, `status code should be 401, actual: ${result.status}`);
+            assert.strictEqual(result.status, expectedStatus, `status code should be ${expectedStatus}, actual: ${result.status}`);
 
             const expectedBody = { error: 'invalid token!' }
             const response = await result.json()
@@ -95,7 +95,7 @@ describe('API E2E test Suite', () => {
             });
 
             const expectedStatus = 200
-            assert.strictEqual(result.status, expectedStatus, `status code should be 401, actual: ${result.status}`);
+            assert.strictEqual(result.status, expectedStatus, `status code should be ${expectedStatus}, actual: ${result.status}`);
 
             const expectedBody = { result: 'Hey welcome!' }
             const response = await result.json()
